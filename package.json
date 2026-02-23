@@ -18,10 +18,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/qarpusso/wild-horizons-node-api.git"
+    "url": "git+https://github.com/qarpusso/from-the-other-side-fullstack-node.git"
   },
   "bugs": {
-    "url": "https://github.com/qarpusso/wild-horizons-node-api/issues"
+    "url": "https://github.com/qarpusso/from-the-other-side-fullstack-node/issues"
   },
-  "homepage": "https://github.com/qarpusso/wild-horizons-node-api#readme"
+  "homepage": "https://github.com/qarpusso/from-the-other-side-fullstack-node#readme"
 }
