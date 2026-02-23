@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/qarpusso/from-the-other-side-fullstack-node/issues"
   },
-  "homepage": "https://github.com/qarpusso/from-the-other-side-fullstack-node#readme"
+  "homepage": "https://github.com/qarpusso/from-the-other-side-fullstack-node#readme",
+  "dependencies": {
+    "sanitize-html": "^2.17.1"
+  }
 }
