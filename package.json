@@ -1,0 +1,27 @@
+{
+  "name": "from-the-other-side",
+  "version": "1.0.0",
+  "description": "A platform for sharing ghostly encounters",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "node",
+    "javascript",
+    "html",
+    "css",
+    "api"
+  ],
+  "author": "Mehmet Enes Turhan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qarpusso/wild-horizons-node-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qarpusso/wild-horizons-node-api/issues"
+  },
+  "homepage": "https://github.com/qarpusso/wild-horizons-node-api#readme"
+}
