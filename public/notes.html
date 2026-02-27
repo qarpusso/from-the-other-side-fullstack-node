@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Notes | Focus</title>
+    <link rel="stylesheet" href="/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="top-header">
+            <a href="/" class="logo-section">
+                <div class="logo-icon"></div>
+                <span class="site-title">Focus</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/habits.html">Habits</a></li>
+                    <li><a href="/notes.html" class="active">Notes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main style="max-width: 1200px;">
+        <div class="notes-layout">
+            <aside class="notes-sidebar">
+                <div style="padding: 1rem; border-bottom: 1px solid var(--border);">
+                    <button id="newNoteBtn" class="btn btn-primary" style="width: 100%;">+ New Note</button>
+                </div>
+                <div id="notesList" class="notes-list">
+                    <!-- Loaded via JS -->
+                </div>
+            </aside>
+
+            <div class="editor-pane">
+                <div id="emptyState" class="section-card" style="height: 100%; display: flex; align-items: center; justify-content: center;">
+                    <p style="color: var(--text-muted)">Select a note to start writing.</p>
+                </div>
+
+                <div id="editorArea" style="display: none; height: 100%;">
+                    <div class="section-card editor-container">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                            <div style="display: flex; gap: 0.5rem;">
+                                <button id="saveNoteBtn" class="btn btn-primary btn-sm">Save</button>
+                                <button id="previewBtn" class="btn btn-secondary btn-sm">Preview</button>
+                            </div>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <button id="deleteNoteBtn" class="btn btn-danger btn-sm">Delete</button>
+                                <button id="cancelEditBtn" class="btn btn-secondary btn-sm">Close</button>
+                            </div>
+                        </div>
+                        <input type="text" id="noteTitle" class="note-title-input" placeholder="Untitled Note">
+                        <textarea id="noteContent" class="note-content-textarea" placeholder="Write something..."></textarea>
+                    </div>
+
+                    <div id="previewOverlay" class="preview-overlay">
+                        <div class="preview-header">
+                            <h2 id="previewTitle" style="margin: 0">Preview</h2>
+                            <button id="closePreviewBtn" class="btn btn-secondary btn-sm">Back to Editor</button>
+                        </div>
+                        <div id="markdownPreview" class="markdown-preview">
+                            <!-- Preview rendered here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Habit & Note Tracker. Offline-first, Privacy-focused.</p>
+    </footer>
+    <script type="module" src="/notes.js"></script>
+</body>
+</html>

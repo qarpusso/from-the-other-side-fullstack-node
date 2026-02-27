@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Habits | Focus</title>
+    <link rel="stylesheet" href="/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="top-header">
+            <a href="/" class="logo-section">
+                <div class="logo-icon"></div>
+                <span class="site-title">Focus</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/habits.html" class="active">Habits</a></li>
+                    <li><a href="/notes.html">Notes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="section-card">
+            <h2 class="section-title">Add New Habit</h2>
+            <form id="habitForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="habitName">Habit Name</label>
+                        <input type="text" id="habitName" placeholder="e.g., Read 30 pages" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="habitFrequency">Frequency</label>
+                        <select id="habitFrequency">
+                            <option value="daily">Daily</option>
+                            <option value="weekly">Weekly</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="habitDescription">Description (Optional)</label>
+                    <input type="text" id="habitDescription" placeholder="Why is this important?">
+                </div>
+                <button type="submit" class="btn btn-primary">Create Habit</button>
+            </form>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title">My Habits</h2>
+            <div id="habitsList" class="habits-grid">
+                <!-- Loaded via JS -->
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2 class="section-title">Recent Activity</h2>
+            <div id="habitHistory" style="display: flex; flex-direction: column; gap: 0.75rem;">
+                <!-- Loaded via JS -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Habit & Note Tracker. Offline-first, Privacy-focused.</p>
+    </footer>
+    <script type="module" src="/habits.js"></script>
+</body>
+</html>
