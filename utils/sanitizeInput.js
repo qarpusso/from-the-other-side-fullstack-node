@@ -1,4 +1,4 @@
-import sanitizeHtml from 'sanitize-html' 
+import sanitizeHtml from 'sanitize-html'
 
 export function sanitizeInput(data) {
 
@@ -6,7 +6,16 @@ export function sanitizeInput(data) {
 
   for (const [key, value] of Object.entries(data)) {
     if (typeof value === 'string') {
-      sanitizedData[key] = sanitizeHtml(value, { allowedTags: ['b'], allowedAttributes: {}})
+      if (key === 'content') {
+        sanitizedData[key] = sanitizeHtml(value, {
+          allowedTags: ['b', 'i', 'em', 'strong', 'a', 'h1', 'h2', 'h3', 'ul', 'ol', 'li', 'p', 'br', 'code', 'pre'],
+          allowedAttributes: {
+            'a': ['href']
+          }
+        })
+      } else {
+        sanitizedData[key] = sanitizeHtml(value, { allowedTags: ['b'], allowedAttributes: {}})
+      }
     } else {
       sanitizedData[key] = value
     }

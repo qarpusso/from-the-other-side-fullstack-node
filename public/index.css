@@ -532,3 +532,390 @@ textarea {
     color: #0357aa;
     outline: 1px solid #0357aa;
 }
+
+/* ============================== */
+/*         HABITS PAGE            */
+/* ============================== */
+
+.habits-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em;
+    gap: 2em;
+}
+
+.habit-add-section,
+.habits-list-section,
+.habit-history-section {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 2em;
+    width: 100%;
+    max-width: 900px;
+}
+
+.habit-add-section h2,
+.habits-list-section h2,
+.habit-history-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    margin-bottom: 0.5em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    padding: 0.75em;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+.habits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.habit-item {
+    background-color: #fff;
+    color: #333;
+    padding: 1.5em;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.habit-info h3 {
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0.5em;
+}
+
+.habit-info p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.habit-actions {
+    display: flex;
+    gap: 0.5em;
+}
+
+.check-btn,
+.delete-habit-btn {
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.check-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.check-btn:hover {
+    background-color: #45a049;
+}
+
+.delete-habit-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-habit-btn:hover {
+    background-color: #da190b;
+}
+
+.habit-history {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.history-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1em;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.history-item strong {
+    color: #4CAF50;
+}
+
+/* ============================== */
+/*         NOTES PAGE             */
+/* ============================== */
+
+.notes-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em;
+    gap: 1em;
+}
+
+.notes-container {
+    display: grid;
+    grid-template-columns: 250px 1fr 1fr;
+    gap: 1em;
+    width: 100%;
+    max-width: 1400px;
+    min-height: 600px;
+}
+
+.notes-sidebar {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.new-note-btn {
+    padding: 0.75em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.new-note-btn:hover {
+    background-color: #45a049;
+}
+
+.notes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    overflow-y: auto;
+}
+
+.note-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.75em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.note-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.note-item.active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.note-item h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.25em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.note-item p {
+    font-size: 0.75rem;
+    color: #ccc;
+}
+
+.note-editor {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.empty-state {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: #ccc;
+}
+
+.editor-area {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    height: 100%;
+}
+
+.note-title-input {
+    padding: 0.75em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.note-content-textarea {
+    flex: 1;
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    resize: none;
+    min-height: 400px;
+}
+
+.editor-actions {
+    display: flex;
+    gap: 0.5em;
+}
+
+.save-btn,
+.delete-btn,
+.cancel-btn {
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.save-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.save-btn:hover {
+    background-color: #45a049;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #da190b;
+}
+
+.cancel-btn {
+    background-color: #757575;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background-color: #616161;
+}
+
+.note-preview {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #333;
+    border-radius: 10px;
+    padding: 2em;
+    overflow-y: auto;
+}
+
+.note-preview h3 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1em;
+    font-size: 1.2rem;
+}
+
+.markdown-preview {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+.markdown-preview h1 {
+    font-size: 2em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.markdown-preview h2 {
+    font-size: 1.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.markdown-preview h3 {
+    font-size: 1.25em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.markdown-preview p {
+    margin-bottom: 1em;
+}
+
+.markdown-preview ul,
+.markdown-preview ol {
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+.markdown-preview code {
+    background-color: #f4f4f4;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+.markdown-preview a {
+    color: #0366d6;
+    text-decoration: none;
+}
+
+.markdown-preview a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+    .notes-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }
+
+    .notes-sidebar {
+        grid-row: 1;
+    }
+
+    .note-editor {
+        grid-row: 2;
+    }
+
+    .note-preview {
+        display: none;
+    }
+}
